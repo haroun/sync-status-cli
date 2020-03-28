@@ -1,0 +1,19 @@
+{
+  "name": "sync-status",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cli.js",
+  "dependencies": {},
+  "devDependencies": {
+    "faucet": "^0.0.1",
+    "tape": "^4.13.2"
+  },
+  "scripts": {
+    "pretest": "npm ci && npm prune",
+    "test": "tape '**/*.test.js' | faucet",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
