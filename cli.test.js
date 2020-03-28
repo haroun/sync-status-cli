@@ -1,11 +1,11 @@
-const { spawn } = require('child_process')
+const {spawn} = require('child_process')
 const test = require('tape')
 
-const run = async (args) => {
+const run = async args => {
   const stderr = []
   const stdout = []
 
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     const cli = spawn('./cli.js', args)
 
     cli.stderr.on('data', data => {
@@ -15,7 +15,7 @@ const run = async (args) => {
       stdout.push(data.toString())
     })
     cli.on('close', code => {
-      resolve({ stderr, stdout, code })
+      resolve({stderr, stdout, code})
     })
   })
 }
@@ -24,7 +24,7 @@ test('cli, when using same tree', async assert => {
   const message = 'diff result must be empty'
 
   const actual = await run(['./fixtures/source', './fixtures/source'])
-  const expected = { stderr: [], stdout: [], code: 0}
+  const expected = {stderr: [], stdout: [], code: 0}
 
   assert.deepEqual(actual, expected, message)
 
@@ -35,7 +35,7 @@ test('cli, when using distinct tree', async assert => {
   const message = 'diff result must be empty'
 
   const actual = await run(['./fixtures/source', './fixtures/target'])
-  const expected = { stderr: [], stdout: [], code: 0}
+  const expected = {stderr: [], stdout: [], code: 0}
 
   assert.deepEqual(actual, expected, message)
 

@@ -5,6 +5,8 @@
   "main": "cli.js",
   "dependencies": {},
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-xo": "^0.29.1",
     "faucet": "^0.0.1",
     "tape": "^4.13.2"
   },
