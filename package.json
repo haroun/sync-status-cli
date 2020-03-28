@@ -1,7 +1,7 @@
 {
-  "name": "sync-status",
+  "name": "@haroun/sync-status-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "Make a diff between two directories and list all missing files",
   "main": "cli.js",
   "dependencies": {},
   "devDependencies": {
@@ -13,7 +13,21 @@
     "test": "tape '**/*.test.js' | faucet",
     "postversion": "git push && git push --tags"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haroun/sync-status-cli.git"
+  },
+  "keywords": [
+    "cli-app",
+    "cli",
+    "sync",
+    "diff",
+    "backup"
+  ],
+  "author": "Harouna Traore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haroun/sync-status-cli/issues"
+  },
+  "homepage": "https://github.com/haroun/sync-status-cli#readme"
 }
