@@ -1,6 +1,6 @@
 {
   "name": "@haroun/sync-status-cli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Make a diff between two directories and list all missing files",
   "main": "cli.js",
   "dependencies": {},
