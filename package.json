@@ -7,13 +7,14 @@
   "devDependencies": {
     "eslint": "^7.15.0",
     "eslint-config-xo": "^0.33.1",
-    "faucet": "^0.0.1",
+    "faucet": "0.0.1",
     "tape": "^5.0.1"
   },
   "scripts": {
-    "pretest": "npm ci && npm prune && eslint .",
+    "debug": "node --inspect --inspect-brk cli.js",
     "test": "tape '**/*.test.js' | faucet",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "pretest": "eslint ."
   },
   "repository": {
     "type": "git",
