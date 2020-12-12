@@ -1,4 +1,4 @@
-# sync-status-cli [![Build Status](https://travis-ci.org/haroun/sync-status-cli.svg?branch=master)](https://travis-ci.org/haroun/sync-status-cli)
+# sync-status-cli ![Node.js CI](https://github.com/haroun/sync-status-cli/workflows/Node.js%20CI/badge.svg) ![CodeQL](https://github.com/haroun/sync-status-cli/workflows/CodeQL/badge.svg)
 
 > Make a diff between two directories (`source` & `target`) and list all files missing in the target.
 
