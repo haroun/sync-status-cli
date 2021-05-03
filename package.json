@@ -12,7 +12,7 @@
   },
   "scripts": {
     "debug": "node --inspect --inspect-brk cli.js",
-    "test": "tape '**/*.test.js' | faucet",
+    "test": "node **/*.test.js | faucet",
     "postversion": "git push && git push --tags",
     "pretest": "eslint ."
   },
