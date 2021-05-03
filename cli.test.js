@@ -1,5 +1,5 @@
-const {spawn} = require('child_process')
-const test = require('tape')
+import {spawn} from 'node:child_process'
+import test from 'tape'
 
 const run = async args => {
   const stderr = []

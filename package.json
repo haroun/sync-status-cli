@@ -2,13 +2,13 @@
   "name": "@haroun/sync-status-cli",
   "version": "1.1.0",
   "description": "Make a diff between two directories and list all missing files",
-  "main": "cli.js",
-  "dependencies": {},
+  "exports": "./cli.js",
+  "type": "module",
   "devDependencies": {
-    "eslint": "^7.15.0",
-    "eslint-config-xo": "^0.33.1",
+    "eslint": "^7.25.0",
+    "eslint-config-xo": "^0.36.0",
     "faucet": "0.0.1",
-    "tape": "^5.0.1"
+    "tape": "^5.2.2"
   },
   "scripts": {
     "debug": "node --inspect --inspect-brk cli.js",
@@ -19,6 +19,17 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/haroun/sync-status-cli.git"
+  },
+  "bin": {
+    "sync-status-cli": "./cli.js"
+  },
+  "files": [
+    "cli.js",
+    "lib/diff.js",
+    "lib/list.js"
+  ],
+  "engines": {
+    "node": ">=12"
   },
   "keywords": [
     "cli-app",
