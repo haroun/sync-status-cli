@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const diff = require('./lib/diff')
+import diff from './lib/diff.js'
 
 const output = ({error, result}) => {
   if (error) {
