@@ -1,5 +1,5 @@
-const {spawn} = require('child_process')
-const test = require('tape')
+import {spawn} from 'node:child_process'
+import test from 'tape'
 
 const run = async args => {
   const stderr = []
@@ -57,10 +57,10 @@ test('cli, when using tree with missing files', async assert => {
         '06.txt',
         '07.txt',
         '08.txt',
-        '09.txt'
-      ].join('\n')
+        '09.txt',
+      ].join('\n'),
     ],
-    code: 0
+    code: 0,
   }
 
   assert.deepEqual(actual, expected, message)
@@ -75,7 +75,7 @@ test('cli, when using invalid source directory', async assert => {
   const expected = {
     stderr: ['invalid path provided "./fixtures/invalid" (ENOENT)'],
     stdout: [],
-    code: 1
+    code: 1,
   }
 
   assert.deepEqual(actual, expected, message)
@@ -90,7 +90,7 @@ test('cli, when using invalid target directory', async assert => {
   const expected = {
     stderr: ['invalid path provided "./fixtures/invalid" (ENOENT)'],
     stdout: [],
-    code: 1
+    code: 1,
   }
 
   assert.deepEqual(actual, expected, message)
@@ -105,7 +105,7 @@ test('cli, when using file as source directory', async assert => {
   const expected = {
     stderr: ['invalid path provided "./fixtures/file.txt"; given file, expected directory (ENOTDIR)'],
     stdout: [],
-    code: 1
+    code: 1,
   }
 
   assert.deepEqual(actual, expected, message)
@@ -120,7 +120,7 @@ test('cli, when using file as target directory', async assert => {
   const expected = {
     stderr: ['invalid path provided "./fixtures/file.txt"; given file, expected directory (ENOTDIR)'],
     stdout: [],
-    code: 1
+    code: 1,
   }
 
   assert.deepEqual(actual, expected, message)
